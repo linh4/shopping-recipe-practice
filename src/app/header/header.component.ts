@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Response } from '@angular/http';
+// import { HttpEvent } from '@angular/common/http';
 
 import { DataStorageServie } from "../shared/data-storage.service";
 
@@ -12,7 +12,7 @@ export class HeaderComponent {
   constructor(private dataStorage: DataStorageServie) {}
 
   onSaveData() {
-    this.dataStorage.storeRecipes().subscribe((response: Response) => {
+    this.dataStorage.storeRecipes().subscribe(response => {
       console.log(response)
     })
   }
